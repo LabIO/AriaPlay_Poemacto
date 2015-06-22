@@ -1,10 +1,10 @@
-#N canvas 735 333 486 292 10;
+#N canvas 77 86 481 307 10;
 #X obj 16 142 tgl 50 0 liga liga-r LIGA 0 16 0 20 -4034 -1 -1 1 1;
 #X obj 11 9 cnv 15 240 120 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 284 81 cnv 15 160 180 empty empty empty 20 12 0 14 -228856 -66577
 0;
-#N canvas 597 136 520 551 patch 0;
+#N canvas 80 160 520 551 patch 0;
 #X obj 18 165 gemhead;
 #X obj 17 249 pix_video;
 #X obj 17 282 pix_rgba;
@@ -31,7 +31,7 @@
 -66577 0;
 #X msg 122 185 0;
 #X obj 18 142 r MainImg;
-#N canvas 258 295 503 292 Android_conn 0;
+#N canvas 256 296 503 292 Android_conn 0;
 #X obj 46 48 netreceive 8000;
 #X obj 56 89 print;
 #X obj 44 183 s start-r;
@@ -346,7 +346,7 @@
 #X connect 34 2 32 0;
 #X connect 34 3 35 0;
 #X restore 239 237 pd order_detect;
-#N canvas 844 88 374 579 win_effects 0;
+#N canvas 257 141 374 579 win_effects 0;
 #X obj 108 375 translateXYZ;
 #X obj 183 210 gemhead 60;
 #X floatatom 132 353 5 0 0 0 - - -, f 5;
@@ -509,7 +509,9 @@
 #X obj 172 31 r win-eff;
 #X obj 175 84 t b b;
 #X obj 36 204 delay 3000;
-#X msg 63 453 text VIVA!!!;
+#X msg 63 453 text PARA BENS!;
+#X floatatom 210 524 5 0 0 0 - - -, f 5;
+#X msg 266 540 15;
 #X connect 0 0 6 0;
 #X connect 1 0 20 0;
 #X connect 2 0 0 1;
@@ -549,10 +551,12 @@
 #X connect 31 1 24 0;
 #X connect 32 0 18 0;
 #X connect 33 0 26 0;
+#X connect 34 0 26 1;
+#X connect 35 0 34 0;
 #X restore 242 262 pd win_effects;
 #X obj 209 122 cnv 15 180 60 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#N canvas 555 219 548 298 init&gem 0;
+#N canvas 551 221 548 298 init&gem 0;
 #X obj 319 255 gemwin;
 #X msg 301 202 create;
 #X msg 352 205 destroy;
@@ -584,8 +588,8 @@
 #X msg 380 242 border 0;
 #X obj 61 34 t b b b;
 #X msg 316 115 offset 1024 0 \, border 1;
-#X msg 111 54 \; liga-r 0 \; THR-r 0.3 \; THRpres-r 0.008 \; defSampN-r
-0 \; Seq-r 1;
+#X msg 115 47 \; liga-r 0 \; THR-r 0.3 \; THRpres-r 0.008 \; defSampN-r
+0 \; Seq-r 1 \; textOn-r 1 \;;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
@@ -624,13 +628,10 @@
 #X obj 10 367 s IMAGE;
 #X msg 155 32 800 600;
 #X msg 158 11 1024 768;
-#X obj 310 126 HotSpot-V 1;
 #X obj 220 126 HotSpot-V 0;
-#X obj 309 160 HotSpot-V 3;
-#X obj 219 160 HotSpot-V 2;
 #X obj 249 330 r init;
 #X msg 249 353 1;
-#X obj 217 354 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 217 354 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 436 340 vsl 15 70 0 127 0 0 empty empty NoiseINthresh 0 -9 0
 10 -262144 -1 -1 0 1;
@@ -660,7 +661,7 @@
 #X obj 759 377 rectangle 4 3;
 #X obj 419 542 send pt;
 #X obj 755 37 receive pt;
-#X obj 191 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 191 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 430 220 rotateXYZ;
 #X floatatom 496 175 5 0 0 0 - - -, f 5;
@@ -720,7 +721,7 @@
 #X obj 1032 274 metro 1200;
 #X msg 1030 249 1;
 #X obj 1027 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X msg 1028 361 text o teu movimento revela o poema;
 #X msg 1034 381 text dito na ordem certa tira-te uma foto;
 #X obj 1126 247 random 360;
@@ -918,9 +919,9 @@
 #X connect 118 0 64 0;
 #X connect 119 0 118 0;
 #X restore 325 431 pd visual;
-#N canvas 1 60 450 300 start 0;
+#N canvas 1 61 450 300 start 0;
 #X obj 244 268 s defSampN-r;
-#X obj 85 214 s defBang-r;
+#X obj 87 211 s defBang-r;
 #X obj 198 230 random 8;
 #X obj 152 29 r start;
 #X msg 344 155 \; sampleN 0 \; sampleN 1 \; sampleN 2 \; sampleN 3
@@ -1040,10 +1041,16 @@ modificar esta variavel \, tem algo que aciona o presence detection
 a toa;
 #X connect 1 0 2 0;
 #X restore 382 488 pd notes;
+#X obj 402 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 405 50 s init;
+#X obj 310 126 HotSpot-V 1;
+#X obj 309 160 HotSpot-V 3;
+#X obj 219 160 HotSpot-V 2;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
-#X connect 3 0 51 0;
+#X connect 3 0 48 0;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
 #X connect 6 0 33 0;
@@ -1066,12 +1073,13 @@ a toa;
 #X connect 33 1 16 0;
 #X connect 35 0 31 0;
 #X connect 36 0 31 0;
-#X connect 41 0 42 0;
-#X connect 42 0 45 1;
-#X connect 43 0 45 0;
-#X connect 44 0 45 4;
-#X connect 47 0 45 2;
-#X connect 48 0 45 3;
+#X connect 38 0 39 0;
+#X connect 39 0 42 1;
+#X connect 40 0 42 0;
+#X connect 41 0 42 4;
+#X connect 44 0 42 2;
+#X connect 45 0 42 3;
+#X connect 50 0 51 0;
 #X restore 144 46 pd patch;
 #X obj 75 151 tgl 30 1 show_spot empty showsp 0 40 0 10 -3 -159808
 -258113 1 1;
@@ -1095,7 +1103,7 @@ spot \; **The abstraction[ColorDistance] must be in the same directory!
 \;;
 #X restore 79 22 pd instructions;
 #X obj 171 152 vsl 25 100 0 1 0 0 THR THR-r THR_col -10 -10 0 10 -262130
--1 -1 1870 1;
+-1 -1 2970 1;
 #X obj 295 84 bng 50 250 50 0 start start-r start 2 12 0 10 -204786
 -1 -1;
 #X obj 368 85 bng 50 250 50 0 over empty over 3 12 0 10 -261234 -1
@@ -1107,7 +1115,7 @@ spot \; **The abstraction[ColorDistance] must be in the same directory!
 #X obj 298 151 bng 40 250 50 0 defBang defBang-r defSamp 0 7 0 10 -159808
 -257985 -191407;
 #X obj 300 226 hradio 15 1 0 8 defSampN defSampN-r defSampleN 0 -8
-0 10 -262144 -1 -1 2;
+0 10 -262144 -1 -1 6;
 #X obj 75 208 tgl 30 1 dev2 dev2-r device 0 37 0 11 -83269 -1 -1 0
 1;
 #X obj 125 151 tgl 30 1 textOn textOn-r textOn 0 40 0 12 -232576 -1
@@ -1118,7 +1126,7 @@ spot \; **The abstraction[ColorDistance] must be in the same directory!
 #X obj 17 200 tgl 50 0 CheckImg PresDet-r PresDet 0 16 0 12 -159808
 -1 -1 0 1;
 #X obj 214 152 vsl 25 100 0 1 0 0 THRpres THRpres-r THR_pres -10 -10
-0 10 -232576 -1 -1 792 1;
+0 10 -232576 -1 -1 79 1;
 #X floatatom 212 259 5 0 0 0 - - -, f 5;
 #X floatatom 171 259 5 0 0 0 - - -, f 5;
 #X floatatom 191 99 10 0 0 0 - - -, f 10;

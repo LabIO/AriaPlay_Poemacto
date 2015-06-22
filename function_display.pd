@@ -1,0 +1,47 @@
+#N canvas 93 169 710 394 10;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array func 100 float 3;
+#A 0 2500 0 2500 0 2304 0 2116 0 1936 0 1764 0 1600 0 1444 0 1296 0
+1156 0 1024 0 900 0 784 0 676 0 576 0 484 0 400 0 324 0 256 0 196 0
+144 0 100 0 64 0 36 0 16 0 4 0 0 0 4 0 16 0 36 0 64 0 100 0 144 0 196
+0 256 0 324 0 400 0 484 0 576 0 676 0 784 0 900 0 1024 0 1156 0 1296
+0 1444 0 1600 0 1764 0 1936 0 2116 2304;
+#X coords 0 100 100 -100 200 140 1 -50 0;
+#X restore 49 106 graph;
+#X obj 458 351 tabwrite func;
+#X floatatom 567 174 5 0 0 0 - - -, f 5;
+#X floatatom 439 221 5 0 0 0 - - -, f 5;
+#X obj 475 64 line;
+#X msg 443 30 -50;
+#X obj 325 48 t b b;
+#X obj 289 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 495 94 t f f;
+#X msg 495 33 50 1000;
+#X obj 557 221 + 50;
+#X obj 461 263 f;
+#X obj 542 290 t b f;
+#X obj 332 183 expr $f1*$f1;
+#X msg 47 290 \; func resize 100 \; func bounds 0 100 100 -100 \; func
+xlabel 0 \; func ylabel 0 \;;
+#X floatatom 316 256 5 0 0 0 - - -, f 5;
+#X floatatom 327 343 5 0 0 0 - - -, f 5;
+#X obj 352 301 pow -2;
+#X connect 2 0 10 0;
+#X connect 3 0 11 1;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 9 0;
+#X connect 6 1 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 13 0;
+#X connect 8 0 17 0;
+#X connect 8 1 2 0;
+#X connect 9 0 4 0;
+#X connect 10 0 12 0;
+#X connect 11 0 1 0;
+#X connect 12 0 11 0;
+#X connect 12 1 1 1;
+#X connect 13 0 3 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
