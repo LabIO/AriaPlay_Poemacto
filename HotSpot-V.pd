@@ -1,4 +1,4 @@
-#N canvas 1 88 737 481 10;
+#N canvas 1 89 737 481 10;
 #X obj 364 76 gemhead 56;
 #X msg 358 173 1 1 0;
 #X obj 268 439 circle 0.5;
@@ -34,11 +34,11 @@
 #X obj 421 282 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 323 278 demux . .;
-#X obj 515 367 f \$1;
+#X obj 540 363 f \$1;
 #X obj 452 455 text3d;
-#X msg 510 387 text \$1;
+#X msg 578 390 text \$1;
 #X obj 499 314 r init;
-#X floatatom 449 289 5 0 0 0 - - -, f 5;
+#X floatatom 449 289 5 0 0 0 - - -;
 #X obj 429 262 r textOn;
 #X obj 340 205 color 1 1 0;
 #X obj 321 378 line;
@@ -51,8 +51,8 @@
 #X obj 70 134 r clear;
 #X msg 126 25 bang;
 #X obj 144 59 f \$0;
-#X floatatom 146 85 5 0 0 0 - - -, f 5;
-#X floatatom 104 86 5 0 0 0 - - -, f 5;
+#X floatatom 146 85 5 0 0 0 - - -;
+#X floatatom 104 86 5 0 0 0 - - -;
 #X obj 106 58 f \$1;
 #X msg 61 197 \; \$1-sample const 0;
 #X obj 70 161 f \$1;
@@ -67,29 +67,29 @@
 #X connect 7 0 6 0;
 #X restore 557 106 pd dollarsigns_theory;
 #X obj 39 374 s bangSample\$1;
-#X floatatom 508 130 5 0 0 0 - - -, f 5;
+#X floatatom 508 130 5 0 0 0 - - -;
 #X obj 444 312 sel 1;
 #X obj 12 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 382 333 separator;
-#X obj 480 341 t b b b;
-#X floatatom 401 371 5 0 0 0 - - -, f 5;
-#X floatatom 437 372 5 0 0 0 - - -, f 5;
+#X obj 487 335 t b b b;
+#X floatatom 401 371 5 0 0 0 - - -;
+#X floatatom 437 372 5 0 0 0 - - -;
 #X msg 480 370 20;
 #X obj 385 404 translateXYZ -0.1 0.1 0;
 #X obj 127 236 print;
-#X floatatom 110 44 5 0 0 0 - - -, f 5;
-#X floatatom 150 44 5 0 0 0 - - -, f 5;
+#X floatatom 110 44 5 0 0 0 - - -;
+#X floatatom 150 44 5 0 0 0 - - -;
 #N canvas 1 55 416 667 simbulzinho 0;
 #X obj 80 119 pix_image;
 #X obj 214 448 pix_texture;
 #X obj 35 52 alpha;
 #X obj 62 620 rectangle 2 2;
 #X obj 83 286 colorRGB;
-#X floatatom 126 255 5 0 0 0 - - -, f 5;
-#X floatatom 168 254 5 0 0 0 - - -, f 5;
-#X floatatom 203 255 5 0 0 0 - - -, f 5;
-#X floatatom 244 256 5 0 0 0 - - -, f 5;
+#X floatatom 126 255 5 0 0 0 - - -;
+#X floatatom 168 254 5 0 0 0 - - -;
+#X floatatom 203 255 5 0 0 0 - - -;
+#X floatatom 244 256 5 0 0 0 - - -;
 #X obj 139 187 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 5900 1;
 #X obj 162 187 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -103,15 +103,15 @@
 -1 -1;
 #X obj 84 504 pow 3;
 #X obj 84 529 * 0.5;
-#X floatatom 154 577 5 0 0 0 - - -, f 5;
-#X floatatom 204 576 5 0 0 0 - - -, f 5;
+#X floatatom 154 577 5 0 0 0 - - -;
+#X floatatom 204 576 5 0 0 0 - - -;
 #X obj 51 362 t b b b;
 #X obj 27 397 delay 350;
 #X obj 34 16 inlet;
 #X obj 127 19 inlet;
 #X obj 213 411 translateXYZ;
-#X floatatom 225 381 5 0 0 0 - - -, f 5;
-#X floatatom 263 381 5 0 0 0 - - -, f 5;
+#X floatatom 225 381 5 0 0 0 - - -;
+#X floatatom 263 381 5 0 0 0 - - -;
 #X obj 365 286 r init;
 #X obj 229 16 inlet;
 #X obj 230 59 unpack f f f;
@@ -164,6 +164,7 @@
 #X obj 607 261 sel 1 0;
 #X msg 521 453 font fonts/Germaniadow.ttf;
 #X msg 454 430 font fonts/AlbertText-Bold.ttf;
+#X obj 593 356 + 1;
 #X connect 0 0 40 0;
 #X connect 1 0 40 1;
 #X connect 3 1 6 0;
@@ -205,7 +206,7 @@
 #X connect 32 0 50 0;
 #X connect 33 0 42 0;
 #X connect 33 1 52 0;
-#X connect 34 0 36 0;
+#X connect 34 0 69 0;
 #X connect 36 0 35 0;
 #X connect 37 0 53 0;
 #X connect 39 0 32 0;
@@ -237,3 +238,4 @@
 #X connect 65 0 66 0;
 #X connect 66 0 61 3;
 #X connect 68 0 35 0;
+#X connect 69 0 36 0;

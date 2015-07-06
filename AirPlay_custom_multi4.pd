@@ -1,13 +1,12 @@
-#N canvas 77 86 481 307 10;
-#X obj 16 142 tgl 50 0 liga liga-r LIGA 0 16 0 20 -4034 -1 -1 1 1;
-#X obj 11 9 cnv 15 240 120 empty empty empty 20 12 0 14 -233017 -66577
+#N canvas 71 89 481 307 10;
+#X obj 23 152 tgl 50 0 liga liga-r LIGA 0 16 0 20 -4034 -1 -1 0 1;
+#X obj 18 19 cnv 15 240 120 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 284 81 cnv 15 160 180 empty empty empty 20 12 0 14 -228856 -66577
+#X obj 291 91 cnv 15 160 180 empty empty empty 20 12 0 14 -228856 -66577
 0;
-#N canvas 80 160 520 551 patch 0;
+#N canvas 74 163 520 551 patch 0;
 #X obj 18 165 gemhead;
 #X obj 17 249 pix_video;
-#X obj 17 282 pix_rgba;
 #X obj 53 470 rectangle 5.333 4;
 #X obj 53 445 pix_texture;
 #X obj 53 419 pix_separator;
@@ -15,9 +14,9 @@
 #X msg 88 296 horizontal;
 #X obj 88 273 r init;
 #X obj 18 210 alpha;
-#X floatatom 90 42 5 0 0 0 - - -, f 5;
+#X floatatom 90 42 5 0 0 0 - - -;
 #X obj 90 65 s THR;
-#X obj 26 18 tgl 45 0 empty liga empty 17 7 0 10 -4034 -1 -1 1 1;
+#X obj 26 18 tgl 45 0 empty liga empty 17 7 0 10 -4034 -1 -1 0 1;
 #X obj 26 98 s STORE;
 #X obj 90 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -50,7 +49,7 @@
 #X obj 114 183 s defBang-r;
 #X obj 27 115 route /liga /start /over /defBang /defSampN /dev2 /textOn
 /THR /checkSoundIn;
-#X floatatom 150 163 5 0 0 0 - - -, f 5;
+#X floatatom 150 163 5 0 0 0 - - -;
 #X connect 0 0 15 0;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
@@ -151,7 +150,7 @@
 #X obj 235 228 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #N canvas 493 143 743 546 sampleCoords 0;
-#X floatatom 236 38 5 0 0 0 - - -, f 5;
+#X floatatom 236 38 5 0 0 0 - - -;
 #X obj 200 15 r sampleN;
 #X msg 44 328 \; \$1-X \$2 \; \$1-Y \$3 \;;
 #X obj 44 284 pack f f f;
@@ -207,8 +206,8 @@
 #X obj 571 322 tabread Ycoor;
 #X obj 550 206 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X floatatom 588 294 5 0 0 0 - - -, f 5;
-#X floatatom 589 361 5 0 0 0 - - -, f 5;
+#X floatatom 588 294 5 0 0 0 - - -;
+#X floatatom 589 361 5 0 0 0 - - -;
 #X obj 343 92 random 100;
 #X obj 429 90 random 100;
 #X obj 429 115 / 100;
@@ -284,8 +283,8 @@
 #X obj 145 38 r Bn;
 #X msg 197 340 \; state 0;
 #X obj 219 39 r state;
-#X floatatom 143 70 5 0 0 0 - - -, f 5;
-#X floatatom 219 66 5 0 0 0 - - -, f 5;
+#X floatatom 143 70 5 0 0 0 - - -;
+#X floatatom 219 66 5 0 0 0 - - -;
 #X obj 143 107 t f f;
 #X obj 197 163 ==;
 #X obj 255 197 + 1;
@@ -299,7 +298,7 @@
 #X obj 305 142 sel 4;
 #X obj 364 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 288 120 5 0 0 0 - - -, f 5;
+#X floatatom 288 120 5 0 0 0 - - -;
 #X obj 32 24 r bangSample0;
 #X obj 32 116 r bangSample1;
 #X obj 30 207 r bangSample2;
@@ -346,11 +345,11 @@
 #X connect 34 2 32 0;
 #X connect 34 3 35 0;
 #X restore 239 237 pd order_detect;
-#N canvas 257 141 374 579 win_effects 0;
+#N canvas 204 103 374 579 win_effects 0;
 #X obj 108 375 translateXYZ;
 #X obj 183 210 gemhead 60;
-#X floatatom 132 353 5 0 0 0 - - -, f 5;
-#X floatatom 160 356 5 0 0 0 - - -, f 5;
+#X floatatom 132 353 5 0 0 0 - - -;
+#X floatatom 160 356 5 0 0 0 - - -;
 #X obj 185 162 r init;
 #X msg 185 184 0;
 #X obj 182 468 colorRGB;
@@ -361,11 +360,10 @@
 #X obj 241 426 unpack f f f;
 #X msg 139 151 1;
 #X obj 68 168 t b b b;
-#X floatatom 202 356 5 0 0 0 - - -, f 5;
+#X floatatom 202 356 5 0 0 0 - - -;
 #X msg 109 205 2 300;
 #X obj 95 261 line;
 #X obj 28 426 r init;
-#X msg 43 227 -2 3000;
 #X obj 144 278 separator;
 #X obj 183 240 t a b;
 #X obj 175 59 spigot;
@@ -407,7 +405,7 @@
 -1 -1;
 #X obj 359 114 delay 100;
 #X obj 426 226 t b b b;
-#X msg 460 303 1, f 2;
+#X msg 460 303 1;
 #X obj 344 238 r init;
 #X msg 353 303 0;
 #X obj 321 478 t a a;
@@ -502,23 +500,24 @@
 #X restore 242 161 pd flash_getImg;
 #X obj 147 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 159 522 text3d;
+#X obj 139 543 text3d;
 #X obj 279 34 r init;
 #X msg 279 61 1;
-#X msg 70 492 font ChocolateCoveredRaindropsBOLD.ttf;
 #X obj 172 31 r win-eff;
 #X obj 175 84 t b b;
 #X obj 36 204 delay 3000;
 #X msg 63 453 text PARA BENS!;
-#X floatatom 210 524 5 0 0 0 - - -, f 5;
-#X msg 266 540 15;
+#X floatatom 100 543 5 0 0 0 - - -;
+#X msg 37 514 10;
+#X msg 43 227 -2 1500;
+#X msg 73 512 font fonts/AlbertText-Bold.ttf;
 #X connect 0 0 6 0;
-#X connect 1 0 20 0;
+#X connect 1 0 19 0;
 #X connect 2 0 0 1;
 #X connect 3 0 0 2;
 #X connect 4 0 5 0;
 #X connect 5 0 1 0;
-#X connect 6 0 26 0;
+#X connect 6 0 25 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
@@ -527,36 +526,37 @@
 #X connect 11 1 6 2;
 #X connect 11 2 6 4;
 #X connect 12 0 1 0;
-#X connect 13 0 32 0;
+#X connect 13 0 30 0;
 #X connect 13 1 15 0;
 #X connect 13 2 12 0;
 #X connect 14 0 0 3;
 #X connect 15 0 16 0;
 #X connect 16 0 14 0;
+#X connect 17 0 31 0;
+#X connect 17 0 35 0;
 #X connect 17 0 33 0;
-#X connect 17 0 29 0;
-#X connect 18 0 16 0;
-#X connect 19 0 0 0;
-#X connect 20 0 19 0;
-#X connect 20 1 7 0;
-#X connect 21 0 31 0;
-#X connect 22 0 21 1;
-#X connect 23 0 22 0;
-#X connect 25 0 31 0;
-#X connect 27 0 28 0;
-#X connect 28 0 22 0;
-#X connect 29 0 26 0;
-#X connect 30 0 21 0;
-#X connect 31 0 13 0;
-#X connect 31 1 24 0;
-#X connect 32 0 18 0;
-#X connect 33 0 26 0;
-#X connect 34 0 26 1;
-#X connect 35 0 34 0;
+#X connect 18 0 0 0;
+#X connect 19 0 18 0;
+#X connect 19 1 7 0;
+#X connect 20 0 29 0;
+#X connect 21 0 20 1;
+#X connect 22 0 21 0;
+#X connect 24 0 29 0;
+#X connect 26 0 27 0;
+#X connect 27 0 21 0;
+#X connect 28 0 20 0;
+#X connect 29 0 13 0;
+#X connect 29 1 23 0;
+#X connect 30 0 34 0;
+#X connect 31 0 25 0;
+#X connect 32 0 25 1;
+#X connect 33 0 32 0;
+#X connect 34 0 16 0;
+#X connect 35 0 25 0;
 #X restore 242 262 pd win_effects;
 #X obj 209 122 cnv 15 180 60 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#N canvas 551 221 548 298 init&gem 0;
+#N canvas 473 223 548 298 init&gem 1;
 #X obj 319 255 gemwin;
 #X msg 301 202 create;
 #X msg 352 205 destroy;
@@ -587,9 +587,9 @@
 #X obj 274 69 t b b b b b;
 #X msg 380 242 border 0;
 #X obj 61 34 t b b b;
-#X msg 316 115 offset 1024 0 \, border 1;
 #X msg 115 47 \; liga-r 0 \; THR-r 0.3 \; THRpres-r 0.008 \; defSampN-r
 0 \; Seq-r 1 \; textOn-r 1 \;;
+#X msg 316 115 offset 1024 0 \, border 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
@@ -614,13 +614,13 @@
 #X connect 23 0 5 0;
 #X connect 23 1 10 0;
 #X connect 23 2 1 0;
-#X connect 23 3 26 0;
+#X connect 23 3 27 0;
 #X connect 23 4 22 0;
 #X connect 24 0 0 0;
 #X connect 25 0 18 0;
 #X connect 25 1 16 0;
-#X connect 25 2 27 0;
-#X connect 26 0 0 0;
+#X connect 25 2 26 0;
+#X connect 27 0 0 0;
 #X restore 241 30 pd init&gem;
 #X obj 211 265 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -638,7 +638,7 @@
 #N canvas 134 59 1218 596 visual 0;
 #X obj 13 230 pix_image;
 #X obj 356 317 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5900 1;
+-1 -1 0 1;
 #X obj 191 125 gemhead;
 #X obj 421 400 part_head;
 #X msg 467 367 speed \$1;
@@ -664,13 +664,13 @@
 #X obj 191 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 430 220 rotateXYZ;
-#X floatatom 496 175 5 0 0 0 - - -, f 5;
+#X floatatom 496 175 5 0 0 0 - - -;
 #X obj 557 221 line;
 #X msg 559 184 \$1 100;
 #X obj 576 310 max 0.02;
 #X obj 777 277 r init;
 #X obj 191 151 demux . .;
-#X obj 248 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 248 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 135 11 inlet;
 #X obj 228 13 inlet;
@@ -687,7 +687,7 @@
 #X obj 408 15 inlet;
 #X obj 713 229 vsl 15 70 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3260 1;
-#X floatatom 692 316 5 0 0 0 - - -, f 5;
+#X floatatom 692 316 5 0 0 0 - - -;
 #X obj 550 241 demux . .;
 #X obj 615 241 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -697,14 +697,14 @@
 #X obj 666 239 r init;
 #X msg 634 238 1;
 #X obj 1016 44 gemhead 52;
-#X floatatom 1003 422 5 0 0 0 - - -, f 5;
+#X floatatom 1003 422 5 0 0 0 - - -;
 #X obj 1016 76 alpha;
-#X floatatom 1088 107 5 0 0 0 - - -, f 5;
-#X floatatom 1123 106 5 0 0 0 - - -, f 5;
-#X floatatom 1159 105 5 0 0 0 - - -, f 5;
-#X floatatom 1193 106 5 0 1 0 - - -, f 5;
-#X floatatom 1102 180 5 0 0 0 - - -, f 5;
-#X floatatom 1147 179 5 0 0 0 - - -, f 5;
+#X floatatom 1088 107 5 0 0 0 - - -;
+#X floatatom 1123 106 5 0 0 0 - - -;
+#X floatatom 1159 105 5 0 0 0 - - -;
+#X floatatom 1193 106 5 0 1 0 - - -;
+#X floatatom 1102 180 5 0 0 0 - - -;
+#X floatatom 1147 179 5 0 0 0 - - -;
 #X obj 1072 139 colorRGB 0.2 0.6 1 0.5;
 #X obj 1107 456 text3d;
 #X obj 1016 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -721,7 +721,7 @@
 #X obj 1032 274 metro 1200;
 #X msg 1030 249 1;
 #X obj 1027 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X msg 1028 361 text o teu movimento revela o poema;
 #X msg 1034 381 text dito na ordem certa tira-te uma foto;
 #X obj 1126 247 random 360;
@@ -732,16 +732,16 @@
 #X obj 1109 35 r textColor;
 #X obj 1114 64 unpack f f f;
 #X msg 1045 412 font ChocolateCoveredRaindropsBOLD.ttf;
-#X floatatom 91 426 5 0 0 0 - - -, f 5;
+#X floatatom 91 426 5 0 0 0 - - -;
 #X obj 1069 212 translateXYZ 0 3.5 0;
 #X obj 53 467 translateXYZ 0 0 0.1;
 #X obj 190 466 translateXYZ 0 0 0.1;
-#X floatatom 245 431 5 0 0 0 - - -, f 5;
+#X floatatom 245 431 5 0 0 0 - - -;
 #X obj 178 432 separator;
 #X obj 16 440 separator;
 #X msg 345 260 0 1000;
 #X msg 303 261 1 3000;
-#X floatatom 135 507 5 0 0 0 - - -, f 5;
+#X floatatom 135 507 5 0 0 0 - - -;
 #X obj 46 536 rectangle 2.666 4;
 #X obj 187 538 rectangle 2.666 4;
 #X obj 54 502 pix_texture;
@@ -759,7 +759,7 @@
 #X obj 856 531 rectangle 5.333 4;
 #X obj 858 506 pix_texture;
 #X obj 865 480 translateXYZ;
-#X floatatom 932 453 5 0 0 0 - - -, f 5;
+#X floatatom 932 453 5 0 0 0 - - -;
 #N canvas 1 55 450 300 tremble 0;
 #X obj 145 254 outlet;
 #X obj 222 256 outlet;
@@ -940,7 +940,7 @@
 #X obj 107 158 mod 8;
 #X obj 167 45 r init;
 #X msg 166 67 0;
-#X floatatom 148 190 5 0 0 0 - - -, f 5;
+#X floatatom 148 190 5 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
@@ -981,7 +981,7 @@
 #X obj 69 65 t b b b b;
 #X msg 23 215 \; PresDet-r 1;
 #X obj 299 28 r silence;
-#X obj 329 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 329 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X connect 0 0 6 0;
 #X connect 3 0 7 0;
@@ -999,7 +999,7 @@
 #X obj 38 110 pix_movement;
 #X obj 38 185 pix_blob;
 #X msg 60 160 4;
-#X floatatom 99 185 10 0 0 0 - - -, f 10;
+#X floatatom 99 185 10 0 0 0 - - -;
 #X obj 38 78 spigot;
 #X obj 91 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -1007,11 +1007,11 @@
 #X obj 76 276 s start;
 #X obj 119 81 r CheckImg;
 #X obj 81 237 sel 1;
-#X floatatom 123 159 5 0 0 0 - - -, f 5;
+#X floatatom 123 159 5 0 0 0 - - -;
 #X obj 185 58 print;
 #X obj 38 13 inlet;
 #X obj 254 178 r THRpres;
-#X floatatom 242 219 5 0 0 0 - - -, f 5;
+#X floatatom 242 219 5 0 0 0 - - -;
 #X obj 83 211 >;
 #X connect 0 0 1 0;
 #X connect 1 3 3 0;
@@ -1047,43 +1047,42 @@ a toa;
 #X obj 310 126 HotSpot-V 1;
 #X obj 309 160 HotSpot-V 3;
 #X obj 219 160 HotSpot-V 2;
-#X connect 0 0 9 0;
-#X connect 1 0 2 0;
-#X connect 2 0 6 0;
-#X connect 3 0 48 0;
+#X connect 0 0 8 0;
+#X connect 1 0 5 0;
+#X connect 2 0 47 0;
+#X connect 3 0 2 0;
 #X connect 4 0 3 0;
-#X connect 5 0 4 0;
-#X connect 6 0 33 0;
+#X connect 5 0 32 0;
+#X connect 6 0 5 0;
 #X connect 7 0 6 0;
-#X connect 8 0 7 0;
-#X connect 9 0 1 0;
-#X connect 10 0 11 0;
-#X connect 12 0 15 0;
-#X connect 14 0 10 0;
-#X connect 15 0 13 0;
-#X connect 16 0 5 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 4;
-#X connect 19 0 20 0;
-#X connect 20 0 1 0;
-#X connect 22 0 20 0;
-#X connect 23 0 0 0;
-#X connect 32 0 29 0;
-#X connect 33 0 34 0;
-#X connect 33 1 16 0;
-#X connect 35 0 31 0;
-#X connect 36 0 31 0;
-#X connect 38 0 39 0;
-#X connect 39 0 42 1;
-#X connect 40 0 42 0;
-#X connect 41 0 42 4;
-#X connect 44 0 42 2;
-#X connect 45 0 42 3;
-#X connect 50 0 51 0;
-#X restore 144 46 pd patch;
-#X obj 75 151 tgl 30 1 show_spot empty showsp 0 40 0 10 -3 -159808
+#X connect 8 0 1 0;
+#X connect 9 0 10 0;
+#X connect 11 0 14 0;
+#X connect 13 0 9 0;
+#X connect 14 0 12 0;
+#X connect 15 0 4 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 4;
+#X connect 18 0 19 0;
+#X connect 19 0 1 0;
+#X connect 21 0 19 0;
+#X connect 22 0 0 0;
+#X connect 31 0 28 0;
+#X connect 32 0 33 0;
+#X connect 32 1 15 0;
+#X connect 34 0 30 0;
+#X connect 35 0 30 0;
+#X connect 37 0 38 0;
+#X connect 38 0 41 1;
+#X connect 39 0 41 0;
+#X connect 40 0 41 4;
+#X connect 43 0 41 2;
+#X connect 44 0 41 3;
+#X connect 49 0 50 0;
+#X restore 151 56 pd patch;
+#X obj 82 161 tgl 30 1 show_spot empty showsp 0 40 0 10 -3 -159808
 -258113 1 1;
-#X obj 125 208 tgl 30 1 full_sample empty full 0 40 0 12 -232576 -1
+#X obj 132 218 tgl 30 1 full_sample empty full 0 40 0 12 -232576 -1
 -1 0 1;
 #N canvas 141 146 407 358 instructions 0;
 #X text 279 288 Mick Mengucci \; LabIO 2015;
@@ -1101,39 +1100,46 @@ the sample \; "show spot" shows the spot in red \; "full sample" plays
 the whole sample otherwise it retriggers it any time you hit the hot
 spot \; **The abstraction[ColorDistance] must be in the same directory!
 \;;
-#X restore 79 22 pd instructions;
-#X obj 171 152 vsl 25 100 0 1 0 0 THR THR-r THR_col -10 -10 0 10 -262130
--1 -1 2970 1;
-#X obj 295 84 bng 50 250 50 0 start start-r start 2 12 0 10 -204786
+#X restore 86 32 pd instructions;
+#X obj 178 162 vsl 25 100 0 1 0 0 THR THR-r THR_col -10 -10 0 10 -262130
+-1 -1 1188 1;
+#X obj 302 94 bng 50 250 50 0 start start-r start 2 12 0 10 -204786
 -1 -1;
-#X obj 368 85 bng 50 250 50 0 over empty over 3 12 0 10 -261234 -1
+#X obj 375 95 bng 50 250 50 0 over empty over 3 12 0 10 -261234 -1
 -1;
-#X obj 409 145 vsl 15 40 0 127 0 0 empty VolIn-show empty 0 -9 0 10
+#X obj 416 155 vsl 15 40 0 127 0 0 empty VolIn-show empty 0 -9 0 10
 -262144 -1 -1 0 1;
-#X obj 366 156 tgl 30 1 ShowSoundIn empty SoundIn 0 37 0 11 -159808
+#X obj 373 166 tgl 30 1 ShowSoundIn empty SoundIn 0 37 0 11 -159808
 -1 -1 0 1;
-#X obj 298 151 bng 40 250 50 0 defBang defBang-r defSamp 0 7 0 10 -159808
+#X obj 305 161 bng 40 250 50 0 defBang defBang-r defSamp 0 7 0 10 -159808
 -257985 -191407;
-#X obj 300 226 hradio 15 1 0 8 defSampN defSampN-r defSampleN 0 -8
-0 10 -262144 -1 -1 6;
-#X obj 75 208 tgl 30 1 dev2 dev2-r device 0 37 0 11 -83269 -1 -1 0
+#X obj 307 236 hradio 15 1 0 8 defSampN defSampN-r defSampleN 0 -8
+0 10 -262144 -1 -1 0;
+#X obj 82 218 tgl 30 1 dev2 dev2-r device 0 37 0 11 -83269 -1 -1 0
 1;
-#X obj 125 151 tgl 30 1 textOn textOn-r textOn 0 40 0 12 -232576 -1
+#X obj 132 161 tgl 30 1 textOn textOn-r textOn 0 40 0 12 -232576 -1
 -1 1 1;
-#X obj 18 57 tgl 50 0 conn conn-r conn 17 7 0 10 -257985 -1 -1 1 1
+#X obj 25 67 tgl 50 0 conn conn-r conn 17 7 0 10 -257985 -1 -1 1 1
 ;
-#X obj 81 81 tgl 25 0 empty YA empty 17 7 0 10 -262144 -1 -1 1 1;
-#X obj 17 200 tgl 50 0 CheckImg PresDet-r PresDet 0 16 0 12 -159808
+#X obj 88 91 tgl 25 0 empty YA empty 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 24 210 tgl 50 0 CheckImg PresDet-r PresDet 0 16 0 12 -159808
 -1 -1 0 1;
-#X obj 214 152 vsl 25 100 0 1 0 0 THRpres THRpres-r THR_pres -10 -10
-0 10 -232576 -1 -1 79 1;
-#X floatatom 212 259 5 0 0 0 - - -, f 5;
-#X floatatom 171 259 5 0 0 0 - - -, f 5;
-#X floatatom 191 99 10 0 0 0 - - -, f 10;
-#X obj 294 22 tgl 30 0 post_online empty post_online 17 7 0 10 -262144
+#X obj 221 162 vsl 25 100 0 1 0 0 THRpres THRpres-r THR_pres -10 -10
+0 10 -232576 -1 -1 990 1;
+#X floatatom 219 269 5 0 0 0 - - -;
+#X floatatom 178 269 5 0 0 0 - - -;
+#X floatatom 198 109 10 0 0 0 - - -;
+#X obj 301 32 tgl 30 0 post_online empty post_online 17 7 0 10 -262144
 -1 -1 0 1;
-#X obj 391 23 tgl 30 0 Seq Seq-r sequenceOn 17 7 0 10 -262144 -1 -1
+#X obj 398 33 tgl 30 0 Seq Seq-r sequenceOn 17 7 0 10 -262144 -1 -1
 1 1;
+#X floatatom 154 107 5 0 0 0 - - -;
+#X text 177 70 THR_col 0.12 ThR_pres 0.01;
+#X msg 156 88 0.12;
+#X msg 202 95 0.01;
 #X connect 7 0 21 0;
 #X connect 19 0 20 0;
 #X connect 22 0 19 0;
+#X connect 25 0 7 0;
+#X connect 27 0 25 0;
+#X connect 28 0 22 0;

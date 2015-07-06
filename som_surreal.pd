@@ -1,0 +1,32 @@
+#N canvas 256 221 656 492 10;
+#X obj 30 62 soundfiler;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array musica 1.40011e+07 float 2;
+#X coords 0 1 1.40011e+07 -1 200 140 1;
+#X restore 403 135 graph;
+#X obj 79 215 tabplay~ musica;
+#X obj 208 368 dac~;
+#X obj 235 297 line~;
+#X msg 253 253 \$1 100;
+#X obj 223 337 *~;
+#X obj 320 229 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 303 66 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 320 120 * 48000;
+#X msg 79 160 bang;
+#X msg 180 180 stop;
+#X msg 241 102 96000 \$1;
+#X msg 30 21 read -resize Surreal.wav musica;
+#X connect 2 0 6 0;
+#X connect 4 0 6 1;
+#X connect 5 0 4 0;
+#X connect 6 0 3 1;
+#X connect 6 0 3 0;
+#X connect 7 0 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 12 0;
+#X connect 10 0 2 0;
+#X connect 11 0 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 0 0;

@@ -1,7 +1,9 @@
 #!/bin/sh
 
-pd AirPlay_custom_multi3-A.pd &
+v4l2-ctl --set-ctrl=power_line_frequency=1
 
-pd -nrt -noaudio AirPlay_custom_multi4.pd 
+pd-extended AirPlay_custom_multi3-A.pd &
+
+pd-extended -nrt -noaudio AirPlay_custom_multi4.pd 
 
 end
